@@ -1,0 +1,62 @@
+
+.address-nav{
+     display: flex;
+
+     @media screen and (min-width: 768px) and (max-width:1199px){
+      flex-direction: column;
+      justify-content: center;
+      margin-left: auto;
+
+     }
+     
+     margin-left: auto;
+    //  margin-left: auto;
+    //  in desctop version
+
+    
+
+    
+
+    
+    
+
+
+
+&__item{
+    // display: flex;
+    align-items: center;
+
+}
+
+// &__item--left{
+//     margin-left: 50px;
+// }
+
+&__icon{
+    margin-right: 10px;
+    fill: currentColor;
+}
+
+
+
+ &__link{
+    display: flex;
+    color: $secondaryColor;
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+
+    transition: color $transitionTime;
+
+
+
+   &:hover, &:focus {
+  color: $accentColor;
+    }
+  }
+}
+
+
+

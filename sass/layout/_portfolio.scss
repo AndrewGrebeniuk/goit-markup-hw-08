@@ -1,0 +1,97 @@
+
+  .portfolio{
+   display: flex;
+   flex-wrap: wrap;
+   margin-bottom: -30px;
+   margin-right: -30px;
+
+
+
+ &__item{
+   width: 370px;
+   margin-bottom: 30px;
+   margin-right: 30px;
+   
+   
+}
+
+&__item:nth-child(3n){
+   margin-right: 0px;
+}
+
+&__link{
+   display: inline-block;
+   color: $primaryColor;
+   transition: box-shadow $transitionTime;
+
+}
+
+&__link:hover, &__link:focus{
+   
+   box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25) ;
+
+}
+
+ &__link:hover &__overlay,
+ &__link:focus &__overlay {
+     transform: translateY(0);
+     opacity: 1;
+  }
+
+
+
+
+ &__thumb{
+   position: relative;
+   overflow: hidden;
+   cursor: pointer;
+}
+
+ &__overlay{
+   position: absolute;
+   opacity: 0;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   transform: translateY(100%);
+   transition: transform $transitionTime,
+   opacity $transitionTime;
+ 
+   color: $whiteColor;
+   background-color: $accentColor;
+   padding: 63px 24px;
+   font-size: 18px;
+   font-weight: 400; 
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+}
+
+ &__element{
+   padding: 20px 24px;
+   border-bottom: 1px solid #EEEEEE;
+   border-left: 1px solid #EEEEEE;
+   border-right: 1px solid #EEEEEE;
+}
+
+/*назви проєктов*/
+ &__name{
+   margin-bottom: 4px;
+
+   font-size: 18px;
+   line-height: 2;
+   letter-spacing: 0.06em;
+
+}
+
+/*опис проєктов*/
+ &__description{
+   margin: 0;
+
+   color: $secondaryColor;
+   font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.03em;
+
+  }
+}

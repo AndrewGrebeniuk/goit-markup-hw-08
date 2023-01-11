@@ -1,0 +1,60 @@
+
+.site-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    @media screen and (min-width:768px) and (max-width: 1199px){
+    margin-left: 87px;
+    }
+    
+
+
+&__item{
+    margin-right: 50px;
+}
+
+&__item--no-margin{
+    margin-right: 0px;
+}
+
+&__link{
+    display: block;
+    color: $primaryColor;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+
+    transition: color $transitionTime;
+
+
+  &:hover, &:focus {
+    color: $accentColor;
+}
+}
+
+
+&__link--current{
+    position: relative;
+    color: $accentColor;
+
+
+  &::after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    content: "";
+    height: 4px;
+    width: 100%;
+    color: $accentColor;
+    background-color: $accentColor;
+    border-radius: 2px;
+     }
+   }
+}
+

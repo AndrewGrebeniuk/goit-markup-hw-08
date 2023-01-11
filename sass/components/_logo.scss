@@ -1,0 +1,34 @@
+
+ .logo{
+    display: block;
+    font-family: $secondaryFont;
+    font-weight: 700;
+   //  font-size: 26px;
+   //  in desctop version
+    font-size: 24px;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+   //  margin-top: 15px;
+   //  margin-bottom: 15px;
+   //  margin-left: 16px;
+   
+   @media screen and (min-width: 768px){
+    padding-top: 26px;
+    padding-bottom: 26px;
+   }
+    
+
+
+ &__forepart{
+    color: $accentColor;
+}
+
+  &__tail{
+    color: $blackColor;
+}
+
+ &__footer{
+    color: $whiteColor;
+}
+}
+

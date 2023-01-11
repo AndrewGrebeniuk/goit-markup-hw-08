@@ -1,0 +1,67 @@
+.checkbox{
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+
+ &__label{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+   
+ 
+    font-size: 14px;
+    font-weight: 400; 
+    
+     line-height: 1.9; 
+     letter-spacing: 0.03em;
+     color: $secondaryColor;
+ }
+ 
+
+ &__box{
+    appearance: none;
+}
+
+
+ &__box:checked +  &__icon-tick{
+    border-color: transparent;
+    background-color: $accentColor;
+    background-origin: border-box;
+
+
+}
+
+ &__icon-tick{
+    display: inline-block;
+
+    border: 2px solid #212121;
+    border-radius: 4px;
+    fill: $whiteColor;
+    margin-right: 7px;
+    
+}
+
+ &__link{
+    color: $accentColor;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    
+}
+
+ &__button{
+     @extend %button;
+
+
+    display: flex;
+    justify-content: center;
+
+
+    min-width: 200px;
+    height: 50px;
+    margin: 0 auto;
+    padding: 8px 51px;
+   
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+ 
+    }
+}
