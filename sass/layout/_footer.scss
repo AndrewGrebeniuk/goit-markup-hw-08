@@ -1,28 +1,42 @@
 
 .footer{
     background-color: #2F303A;
-    padding-top: 60px;
-    padding-bottom: 60px;
+   
 }
 
-// .footer-flex{
-//     display: flex;  
-//     // align-items: baseline;
-//     //  in desctop version
+.footer-container{
+    
+     
+    // align-items: baseline;
+    //  in desctop version
+
+   @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    
+    text-align: center;
+    
+   }
        
-// }
+}
     
 
   .mob-footer{
+
+  
     display: flex;
     flex-direction: column;
+    // no in desctop version
+    
     align-items: center;
     justify-content: center;
-    // no in desctop version
-
-
+   
+    
 
   }
+
+  
+
 .footer-call{
     color: $whiteColor;
     text-transform: uppercase;
@@ -46,7 +60,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 60px;
+
+    @media screen and (max-width:480px){
+      margin-top: 60px;
+    }
+    
    
 
 

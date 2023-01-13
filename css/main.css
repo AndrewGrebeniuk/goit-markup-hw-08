@@ -93,12 +93,6 @@ a {
   text-decoration: none;
   letter-spacing: 0.03em;
 }
-@media screen and (min-width: 768px) {
-  .logo {
-    padding-top: 26px;
-    padding-bottom: 26px;
-  }
-}
 .logo__forepart {
   color: #2196F3;
 }
@@ -110,10 +104,17 @@ a {
 }
 
 .title {
+  margin-top: 0;
+  margin-bottom: 30px;
   font-size: 28px;
   line-height: 1.2;
   letter-spacing: 0.03em;
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .title {
+    font-size: 36px;
+  }
 }
 
 .backdrop {
@@ -396,7 +397,7 @@ textarea:focus {
   letter-spacing: 0.03em;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1199px) {
   .activity {
     display: none;
   }
@@ -448,7 +449,6 @@ textarea:focus {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-left: auto;
   }
 }
 .address-nav__item {
@@ -484,12 +484,6 @@ textarea:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   color: #ffffff;
   font-style: normal;
   font-size: 14px;
@@ -498,6 +492,11 @@ textarea:focus {
   margin-top: 20px;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (max-width: 480px) {
+  .address {
+    text-align: center;
+  }
 }
 .address:hover, .address:focus {
   color: #2196F3;
@@ -525,22 +524,21 @@ textarea:focus {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  gap: 30px 30px;
 }
 .advantage__element {
-  margin-bottom: 30px;
+  width: 100%;
+  max-width: 450px;
 }
 @media screen and (min-width: 768px) {
   .advantage__element {
-    margin-right: 30px;
+    width: 354px;
   }
 }
-@media screen and (min-width: 768px) {
-  .advantage__element:nth-child(even) {
-    margin-right: 0px;
+@media screen and (min-width: 1200px) {
+  .advantage__element {
+    width: 270px;
   }
-}
-.advantage__element--no-margin {
-  margin-bottom: 0;
 }
 .advantage__icon {
   display: -webkit-box;
@@ -559,12 +557,16 @@ textarea:focus {
           align-items: center;
 }
 .advantage__title {
-  text-align: center;
   font-size: 14px;
   line-height: 1.1;
   letter-spacing: 0.03em;
   margin-top: 0;
   margin-bottom: 10px;
+}
+@media screen and (max-width: 480px) {
+  .advantage__title {
+    text-align: center;
+  }
 }
 .advantage__desc {
   color: #757575;
@@ -637,26 +639,26 @@ textarea:focus {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  gap: 30px 30px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 .client__element {
-  margin-bottom: 30px;
   width: 100%;
   max-width: 210px;
+  height: 92px;
 }
-.client__element:nth-child(2n+1) {
-  margin-right: 30px;
-}
-.client__element:nth-child(n+5) {
-  margin-bottom: 0px;
+@media screen and (min-width: 1200px) {
+  .client__element {
+    width: 170px;
+  }
 }
 .client__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 92px;
+  height: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -724,8 +726,17 @@ textarea:focus {
 
 .footer {
   background-color: #2F303A;
-  padding-top: 60px;
-  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    text-align: center;
+  }
 }
 
 .mob-footer {
@@ -769,7 +780,11 @@ textarea:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 60px;
+}
+@media screen and (max-width: 480px) {
+  .socmed-footer {
+    margin-top: 60px;
+  }
 }
 .socmed-footer__list {
   display: -webkit-box;
@@ -815,7 +830,7 @@ textarea:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 0;
+  margin: 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -861,11 +876,8 @@ textarea:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .site-nav {
-    margin-left: 87px;
-  }
+  margin-left: auto;
+  margin-right: auto;
 }
 .site-nav__item {
   margin-right: 50px;
@@ -919,7 +931,14 @@ textarea:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 60px;
+}
+@media screen and (max-width: 480px) {
+  .signup {
+    margin-top: 60px;
+  }
+}
+.signup__form {
+  width: 100%;
 }
 .signup__input {
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -941,6 +960,8 @@ textarea:focus {
   min-width: 200px;
   height: 50px;
   margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 8px 26px;
 }
 .signup__button:hover, .signup__button:focus {
@@ -954,19 +975,34 @@ textarea:focus {
 
 .team {
   background-color: #F5F4FA;
-  margin-top: 60px;
   /*опис члена команди*/
   /*призвіща команди*/
   /*позиції команди*/
 }
+.team__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px 30px;
+}
 .team__element {
-  margin-bottom: 30px;
+  width: 100%;
+  max-width: 450px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
-.team__element--no-margin {
-  margin-bottom: 0;
+@media screen and (min-width: 768px) {
+  .team__element {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__element {
+    width: 270px;
+  }
 }
 .team__descr {
   padding-top: 30px;
@@ -991,7 +1027,9 @@ textarea:focus {
 
 .menu-container {
   display: none;
-  background-color: tomato;
+  padding: 48px 40px;
+  background-color: #ffffff;
+  height: 100%;
   width: 100%;
 }
 .menu-container.is-open {
@@ -1001,7 +1039,7 @@ textarea:focus {
   .menu-container {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 0;
     left: 0;
     width: 100%;
   }
@@ -1018,13 +1056,11 @@ textarea:focus {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  margin-top: 10px;
-  margin-right: 15px;
-  margin-bottom: 10px;
   margin-left: auto;
   padding: 0;
   border: none;
   background-color: transparent;
+  z-index: 1;
 }
 @media screen and (min-width: 481px) {
   .mobmenu__button {
@@ -1057,8 +1093,6 @@ textarea:focus {
 
 .mobmenu-nav {
   display: block;
-  margin-top: 48px;
-  margin-left: 40px;
 }
 .mobmenu-nav__link {
   display: block;
@@ -1072,6 +1106,50 @@ textarea:focus {
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.mobmenu-nav__link:hover, .mobmenu-nav__link:focus {
+.mobmenu-nav__link__link:hover, .mobmenu-nav__link__link:focus {
   color: #2196F3;
+}
+
+.mobmenu-address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.mobmenu-address__item {
+  margin-top: 32px;
+}
+.mobmenu-address__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #757575;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobmenu-address__link:hover, .mobmenu-address__link:focus {
+  color: #2196F3;
+}
+
+.mobmenu-socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.mobmenu-socials__link {
+  color: #2196F3;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
 }/*# sourceMappingURL=main.css.map */
