@@ -1,40 +1,39 @@
 
 .address-nav{
-     display: flex;
+
+  @media screen and (max-width: 767px) {
+    display: none;   
+}
+  
 
      @media screen and (min-width: 768px) and (max-width:1199px){
+      display: flex;
       flex-direction: column;
       justify-content: center;
-     
+      gap: 10px;
+    }
 
-     }
-     
-     margin-left: auto;
-    //  margin-left: auto;
-    //  in desctop version
+      @media screen and (min-width: 1200px){
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
 
-    
-
-    
-
-    
-    
-
-
+      }
 
 &__item{
-    // display: flex;
+   
     align-items: center;
 
 }
 
-// &__item--left{
-//     margin-left: 50px;
-// }
+
 
 &__icon{
     margin-right: 10px;
     fill: currentColor;
+
+
+
 }
 
 

@@ -434,14 +434,16 @@ textarea:focus {
   background-color: rgba(47, 48, 48, 0.8);
 }
 
-.address-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: auto;
+@media screen and (max-width: 767px) {
+  .address-nav {
+    display: none;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .address-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -449,6 +451,19 @@ textarea:focus {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    gap: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .address-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 30px;
   }
 }
 .address-nav__item {
@@ -484,6 +499,7 @@ textarea:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 231px;
   color: #ffffff;
   font-style: normal;
   font-size: 14px;
@@ -493,7 +509,7 @@ textarea:focus {
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1199px) {
   .address {
     text-align: center;
   }
@@ -728,14 +744,26 @@ textarea:focus {
   background-color: #2F303A;
 }
 
-@media screen and (min-width: 768px) {
+.footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  gap: 60px;
+}
+@media screen and (min-width: 1200px) {
   .footer-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    text-align: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-line-pack: center;
+        align-content: center;
   }
 }
 
@@ -747,12 +775,21 @@ textarea:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+@media screen and (max-width: 1199px) {
+  .mob-footer {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .mob-footer {
+    text-align: start;
+  }
 }
 
 .footer-call {
@@ -784,6 +821,18 @@ textarea:focus {
 @media screen and (max-width: 480px) {
   .socmed-footer {
     margin-top: 60px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .socmed-footer {
+    margin-left: 165px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .socmed-footer {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
   }
 }
 .socmed-footer__list {
@@ -830,10 +879,17 @@ textarea:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0;
+  margin: 0 auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .header-container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .hero-section {
@@ -878,6 +934,11 @@ textarea:focus {
           justify-content: center;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (max-width: 767px) {
+  .site-nav {
+    display: none;
+  }
 }
 .site-nav__item {
   margin-right: 50px;
@@ -925,20 +986,32 @@ textarea:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  width: 100%;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1199px) {
   .signup {
     margin-top: 60px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .signup {
+    width: 570px;
   }
 }
 .signup__form {
   width: 100%;
+  gap: 20px;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .signup__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 .signup__input {
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -950,6 +1023,16 @@ textarea:focus {
   max-width: 450px;
   margin-right: 0px;
 }
+@media screen and (min-width: 768px) {
+  .signup__input {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .signup__input {
+    width: 358px;
+  }
+}
 .signup__button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -959,10 +1042,14 @@ textarea:focus {
           justify-content: center;
   min-width: 200px;
   height: 50px;
-  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
   padding: 8px 26px;
+}
+@media screen and (max-width: 1199px) {
+  .signup__button {
+    margin-top: 20px;
+  }
 }
 .signup__button:hover, .signup__button:focus {
   color: #212121;
@@ -1106,7 +1193,7 @@ textarea:focus {
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.mobmenu-nav__link__link:hover, .mobmenu-nav__link__link:focus {
+.mobmenu-nav__link:hover, .mobmenu-nav__link:focus {
   color: #2196F3;
 }
 
@@ -1152,4 +1239,10 @@ textarea:focus {
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  padding-right: 10px;
+  margin-right: 10px;
+}
+.mobmenu-socials__link:last-child {
+  border: none;
 }/*# sourceMappingURL=main.css.map */
