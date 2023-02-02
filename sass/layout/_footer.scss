@@ -7,20 +7,20 @@
 .footer-container{
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  // justify-content: center;
 
   align-items: baseline;
-  gap: 60px;
+  
 
 
 
-  //  @media screen and (min-width: 768px) {
-  //   display: flex;
-  //   flex-wrap: wrap;
-  //   justify-content: center;
+   @media screen and (max-width: 1199px) {
+   
+    justify-content: center;
+    gap: 60px;
 
    
-  //  }
+   }
 
 
 
@@ -53,7 +53,7 @@
     }
 
     @media screen and (min-width: 1200px){
-      // margin-right: 70px;
+      margin-right: 70px;
       text-align: start;
     }
     
@@ -99,6 +99,7 @@
     }
     @media screen and (min-width:1200px) {
       align-items: start;
+      margin-right: 93px;
       
       
     }

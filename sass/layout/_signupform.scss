@@ -28,8 +28,14 @@
    &__form{
       
       width: 100%;
-      gap: 20px;
+     
       text-align: center;
+
+     
+     @media screen and (max-width: 1199px){
+      gap: 20px;
+     }
+
 
 
       @media  screen and (min-width: 1200px) {
@@ -57,6 +63,7 @@
 
    @media screen and (min-width: 1200px){
       width: 358px;
+      margin-right: 10px;
    }
 
 

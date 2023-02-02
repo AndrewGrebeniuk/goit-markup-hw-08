@@ -3,28 +3,61 @@
     text-align: center;
     padding-top: 118px;
     padding-bottom: 118px;
-    // padding desktop other
-    // max-width: 1600px;
 
-    
-    
+    @media  screen and (min-width: 1200px) {
+        padding-top: 200px;
+        padding-bottom: 200px;
+        max-width: 1600px;
+    } 
+
 }
 
-// /*overlay*/
+/*overlay*/
 
-// .hero-overlay{
+.hero-overlay {
 
-//     max-width: 1600px;
-//     height: 600px;
-//     margin-left: auto;
-//     margin-right: auto;
-//     background-image: linear-gradient(
-//         to right,
-//         rgba(47,48, 58, 0.4),
-//         rgba(47,48, 58, 0.4)
-//         ),
-//     url("../images/hero-img.jpg");
-// }
+    max-width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(
+        to right,
+        rgba(47,48, 58, 0.4),
+        rgba(47,48, 58, 0.4)
+        ),
+    url("../images/Hero_mobile.jpg");
+
+    @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+            background-image: url("../images/Hero_mobile@2.jpg");
+        }
+
+    @media screen and (min-width: 768px){
+        background-image: url("../images/Hero_tablet.jpg");
+
+        @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+            background-image: url("../images/Hero_tablet@2.jpg");
+        }
+    }
+
+        @media screen and (min-width: 1200px){
+            background-image: url("../images/hero_desctop.jpg");
+    
+            @media screen and (min-device-pixel-ratio: 2),
+            screen and (min-resolution: 192dpi),
+            screen and (min-resolution: 2dppx) {
+                background-image: url("../images/hero_desctop@2.jpg");
+            }
+        }
+
+    }
+
+
+
+
 
 
 /*основний напис заголовка*/
@@ -37,27 +70,37 @@
    
     text-transform: uppercase;
     font-size: 26px; 
-    // font-size: 40px desktop; 
-    line-height: 1.4; 
-    letter-spacing: 0.06em;
- 
 
-// /*кнопка героя*/
- &__button {
-     @extend %button;
-    
-    
-     padding: 10px 24px;
-    //    padding desktop 10 32
-     min-width: 200px;
-    //    width desktop 216
-     display: inline-block;
-     margin: 0 auto;
-   
-  &:hover, &:focus {
- color: $primaryColor;
- background-color: $whiteColor ;
-       }
-     }
+    @media  screen and (min-width: 1200px) {
+        font-size: 40px;
     }
 
+    line-height: 1.4; 
+    letter-spacing: 0.06em;
+
+
+
+
+    
+
+/*кнопка героя*/
+&__button {
+    @extend %button;
+    
+    
+    padding: 10px 32px;
+
+    @media screen and (min-width:1200px){
+        padding: 10px 32px;
+     } 
+
+    min-width: 216px;
+    display: inline-block;
+    margin: 0 auto;
+   
+ &:hover, &:focus {
+color: $primaryColor;
+background-color: $whiteColor ;
+      }
+    }
+}

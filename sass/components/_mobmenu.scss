@@ -1,58 +1,119 @@
-.menu-container{
-    display: none;
-    padding: 48px 40px;
+// .menu-container{
+//     display: none;
+//     padding: 48px 40px;
 
     
+//     background-color: $whiteColor;
+    
+//     height: 100%;
+//     width: 100%;
+
+
+//     &.is-open{
+//         display: block;
+//     }
+
+//     @media screen and (max-width: 767px) {
+//         display: none;
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         width: 100%;
+//     }
+
+//     @media screen and (min-width: 768px){
+//         display: flex;
+//     }
+
+// }
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    // as per Kuznecova recomend
+
+
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 32px;
     background-color: $whiteColor;
-    
-    height: 100%;
-    width: 100%;
+    z-index: 999;
+  
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
+  }
 
 
-    &.is-open{
-        display: block;
-    }
+  
+  .menu-container.is-open {
+    transform: translateX(0);
+  }
+  
+  .menu-container .menu-toggle {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    color: #fff;
+  }
 
-    @media screen and (max-width: 767px) {
-        display: none;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-    }
+// 
+// .mobmenu__button{
+//     display: inline-flex;
+//     margin-left: auto;
+//     padding: 0;
+//     border: none;
+//     background-color: transparent;
+//     z-index: 1;
 
-    @media screen and (min-width: 768px){
-        display: flex;
-    }
+//     @media screen and (min-width: 481px) {
+//         display: none;
+//     }
+// }
+// .mobmenu__button .icon-closemenu {
+//     display: none;
+// }
 
-}
+// .mobmenu__button.is-open .icon-closemenu {
+//     display: block;
+// }
 
 
-.mobmenu__button{
-    display: inline-flex;
+// .mobmenu__button.is-open .icon-mobmenu {
+//     display: none;
+// }
+
+.menu-toggle {
+    min-height: 40px;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // z-index: 2;
+  
     margin-left: auto;
+    // 0 from workshop
     padding: 0;
-    border: none;
     background-color: transparent;
-    z-index: 1;
-
-    @media screen and (min-width: 481px) {
-        display: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+  }
+  
+  @media (min-width: 768px) {
+    .menu-toggle {
+      display: none;
     }
-}
-.mobmenu__button .icon-closemenu {
-    display: none;
-}
-
-.mobmenu__button.is-open .icon-closemenu {
-    display: block;
-}
-
-
-.mobmenu__button.is-open .icon-mobmenu {
-    display: none;
-}
-
+  }
+  
+  .menu-toggle:hover,
+  .menu-toggle:focus {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
 
 .menu-desktop{
     display: flex;
@@ -72,12 +133,7 @@
 
 
 .mobmenu-nav{
-    display: block;
-    
-    
-    // display: flex;
-
-
+   margin-bottom: auto;
 
 
 &__link{
@@ -97,6 +153,11 @@
   &:hover, &:focus {
     color: $accentColor;
         }
+
+   &--current{
+    color: $accentColor;
+   }   
+
       }
     }
 
@@ -105,6 +166,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      margin-bottom: auto;
 
   &__item{
     margin-top: 32px;
@@ -127,7 +189,32 @@
   color: $accentColor;
     }
   }
+
+  &__link--accented{
+    color: $accentColor;
+
+    font-size: 34px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+
+    @media screen and (min-width:320px) and (max-width: 480px) {
+      font-size: 24px;
+      
+    }
+
+  }
 }
+
+.icon-closemenu:hover, .icon-closemenu:focus{
+  color: $accentColor;
+}
+
+
+
+
+
+
 
 
 .mobmenu-socials{
@@ -146,13 +233,16 @@
         border-right: 1px solid rgba(33, 33, 33, 0.2);
         padding-right: 10px;
         margin-right: 10px;
-        &:last-child {
-            border: none;}
 
+        @media  screen and (max-width: 480px) {
+          font-size: 12px;
+          
+        }
+
+
+    &__link--no-border{
+      border: none;
     }
 
-
 }
-
-
-
+}
