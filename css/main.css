@@ -44,6 +44,12 @@
   padding-bottom: 60px;
 }
 
+.img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 h3, p, section, ul, li {
   margin: 0;
 }
@@ -930,12 +936,52 @@ textarea:focus {
   text-align: center;
   padding-top: 118px;
   padding-bottom: 118px;
+  max-width: 1600px;
+  max-height: 600px;
+  margin: 0 auto;
+  background-size: cover;
 }
 @media screen and (min-width: 1200px) {
   .hero-section {
     padding-top: 200px;
     padding-bottom: 200px;
     max-width: 1600px;
+  }
+}
+@media screen and (max-width: 767.5px) {
+  .hero-section {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero_mobile.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_mobile.jpg);
+  }
+}
+@media screen and (max-width: 767.5px) and (min-device-pixel-ratio: 2), screen and (max-width: 767.5px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767.5px) and (min-resolution: 192dpi), screen and (max-width: 767.5px) and (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero_mobile@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_mobile@2x.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero-section {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero_tablet.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_tablet.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero_tablet@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_tablet@2x.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero-section {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero_desctop.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_desctop.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero_desctop@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_desctop@2x.jpg);
   }
 }
 
@@ -950,6 +996,7 @@ textarea:focus {
   font-size: 26px;
   line-height: 1.4;
   letter-spacing: 0.06em;
+  /*кнопка героя*/
 }
 @media screen and (min-width: 1200px) {
   .hero {
@@ -957,8 +1004,8 @@ textarea:focus {
   }
 }
 .hero__button {
-  padding: 10px 24px;
-  min-width: 200px;
+  padding: 10px 32px;
+  min-width: 216px;
   display: inline-block;
   margin: 0 auto;
 }
@@ -1304,10 +1351,15 @@ textarea:focus {
 }
 .mobmenu-address__link--accented {
   color: #2196F3;
-  font-size: 34px;
+  font-size: 24px;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
+}
+@media screen and (min-width: 460px) {
+  .mobmenu-address__link--accented {
+    font-size: 34px;
+  }
 }
 
 .icon-closemenu:hover, .icon-closemenu:focus {
@@ -1321,7 +1373,7 @@ textarea:focus {
 }
 .mobmenu-socials__link {
   color: #2196F3;
-  font-size: 18px;
+  font-size: 12px;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
@@ -1329,6 +1381,11 @@ textarea:focus {
   padding-right: 10px;
   margin-right: 10px;
 }
-.mobmenu-socials__link--no-border {
+@media screen and (min-width: 460px) {
+  .mobmenu-socials__link {
+    font-size: 18px;
+  }
+}
+.mobmenu-socials__link__link--no-border {
   border: none;
 }/*# sourceMappingURL=main.css.map */
