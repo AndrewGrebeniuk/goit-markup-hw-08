@@ -89,9 +89,6 @@
     align-items: center;
     justify-content: center;
 
-    @media screen and (max-width:480px){
-      margin-top: 60px;
-    }
 
     @media screen and (min-width:768px) and (max-width:1199px) {
       margin-left: 165px;

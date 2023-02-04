@@ -43,6 +43,12 @@
   padding-top: 60px;
   padding-bottom: 60px;
 }
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
 
 .img {
   display: block;
@@ -99,6 +105,12 @@ a {
   text-decoration: none;
   letter-spacing: 0.03em;
 }
+@media screen and (max-width: 767px) {
+  .logo {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
 @media screen and (min-width: 768px) {
   .logo {
     font-size: 26px;
@@ -130,6 +142,7 @@ a {
 @media screen and (min-width: 1200px) {
   .title {
     font-size: 36px;
+    margin-bottom: 50px;
   }
 }
 
@@ -424,6 +437,9 @@ textarea:focus {
   letter-spacing: 0.03em;
 }
 
+.activity {
+  padding-top: 0;
+}
 @media screen and (max-width: 1199px) {
   .activity {
     display: none;
@@ -508,12 +524,17 @@ textarea:focus {
   display: -ms-flexbox;
   display: flex;
   color: #757575;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 1200px) {
+  .address-nav__link {
+    font-size: 14px;
+  }
 }
 .address-nav__link:hover, .address-nav__link:focus {
   color: #2196F3;
@@ -607,7 +628,7 @@ textarea:focus {
   margin-top: 0;
   margin-bottom: 10px;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 576px) {
   .advantage__title {
     text-align: center;
   }
@@ -856,11 +877,6 @@ textarea:focus {
       -ms-flex-pack: center;
           justify-content: center;
 }
-@media screen and (max-width: 480px) {
-  .socmed-footer {
-    margin-top: 60px;
-  }
-}
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .socmed-footer {
     margin-left: 165px;
@@ -1091,7 +1107,6 @@ textarea:focus {
 }
 @media screen and (max-width: 1199px) {
   .signup {
-    margin-top: 60px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1267,7 +1282,7 @@ textarea:focus {
       -ms-flex-pack: center;
           justify-content: center;
   margin-left: auto;
-  padding: 0;
+  padding: 10px 0;
   background-color: transparent;
   cursor: pointer;
   border: none;

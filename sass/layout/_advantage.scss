@@ -1,6 +1,6 @@
 .advantage{
   
-
+    
 &__list{
     display: flex;
     flex-wrap: wrap;
@@ -44,7 +44,7 @@
 
 &__title{
 
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 576px) {
         text-align: center; 
     }
     
